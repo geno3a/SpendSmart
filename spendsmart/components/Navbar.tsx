@@ -40,7 +40,10 @@ function DesktopNavbar() {
         </div>
         <div className="flex items-center gap-2">
           <ThemeSwitchButton />
-          <UserButton afterSwitchSessionUrl="/sign-in" />
+          <UserButton
+            afterSwitchSessionUrl="/sign-in"
+            afterSignOutUrl="/sign-in"
+          />
         </div>
       </nav>
     </div>
