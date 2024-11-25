@@ -3,6 +3,11 @@
 import {
   CreateCategorySchema,
   CreateCategorySchemaType,
+<<<<<<< HEAD
+  DeleteCategorySchema,
+  DeleteCategorySchemaType,
+=======
+>>>>>>> 24a1670e529fbaa51a145972fe1ec79e25c8f41f
 } from "@/lib/categories";
 import prisma from "@/lib/prisma";
 import { currentUser } from "@clerk/nextjs/server";
@@ -30,3 +35,27 @@ export async function CreateCategory(form: CreateCategorySchemaType) {
     },
   });
 }
+<<<<<<< HEAD
+
+export async function DeleteCategory(form: DeleteCategorySchemaType) {
+  const parsedBody = DeleteCategorySchema.safeParse(form);
+  if (!parsedBody.success) {
+    throw new Error("bad request");
+  }
+  const user = await currentUser();
+  if (!user) {
+    redirect("/sign-in");
+  }
+
+  return await prisma.category.delete({
+    where: {
+      name_userId_type: {
+        userId: user.id,
+        name: parsedBody.data.name,
+        type: parsedBody.data.type,
+      },
+    },
+  });
+}
+=======
+>>>>>>> 24a1670e529fbaa51a145972fe1ec79e25c8f41f
