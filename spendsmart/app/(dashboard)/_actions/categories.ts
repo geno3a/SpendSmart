@@ -3,8 +3,11 @@
 import {
   CreateCategorySchema,
   CreateCategorySchemaType,
+<<<<<<< HEAD
   DeleteCategorySchema,
   DeleteCategorySchemaType,
+=======
+>>>>>>> 24a1670e529fbaa51a145972fe1ec79e25c8f41f
 } from "@/lib/categories";
 import prisma from "@/lib/prisma";
 import { currentUser } from "@clerk/nextjs/server";
@@ -32,6 +35,7 @@ export async function CreateCategory(form: CreateCategorySchemaType) {
     },
   });
 }
+<<<<<<< HEAD
 
 export async function DeleteCategory(form: DeleteCategorySchemaType) {
   const parsedBody = DeleteCategorySchema.safeParse(form);
@@ -53,3 +57,5 @@ export async function DeleteCategory(form: DeleteCategorySchemaType) {
     },
   });
 }
+=======
+>>>>>>> 24a1670e529fbaa51a145972fe1ec79e25c8f41f

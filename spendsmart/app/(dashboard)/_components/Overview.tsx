@@ -6,8 +6,11 @@ import { UserSettings } from "@prisma/client";
 import { differenceInDays, startOfMonth } from "date-fns";
 import React, { useState } from "react";
 import { toast } from "sonner";
+<<<<<<< HEAD
 import StatsCards from "./StatsCards";
 import CategoriesStats from "./CategoriesStats";
+=======
+>>>>>>> 24a1670e529fbaa51a145972fe1ec79e25c8f41f
 
 function Overview({ userSettings }: { userSettings: UserSettings }) {
   const [dateRange, setDateRange] = useState<{ from: Date; to: Date }>({
@@ -43,6 +46,7 @@ function Overview({ userSettings }: { userSettings: UserSettings }) {
           />
         </div>
       </div>
+<<<<<<< HEAD
       <div className="flex flex-col px-6 gap-2">
         <StatsCards
           userSettings={userSettings}
@@ -55,6 +59,8 @@ function Overview({ userSettings }: { userSettings: UserSettings }) {
           to={dateRange.to}
         />
       </div>
+=======
+>>>>>>> 24a1670e529fbaa51a145972fe1ec79e25c8f41f
     </>
   );
 }
