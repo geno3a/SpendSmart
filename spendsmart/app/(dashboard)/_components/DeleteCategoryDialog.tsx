@@ -37,7 +37,7 @@ function DeleteCategoryDialog({ category, trigger }: Props) {
         queryKey: ["categories"],
       });
     },
-    onError: (error) => {
+    onError: () => {
       toast.error("An error occurred while deleting the category", {
         id: categoryIdentifier,
       });
